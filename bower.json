@@ -5,7 +5,7 @@
     "Michał Wasiluk"
   ],
   "description": "Angular survey/form builder and viewer inspired by Google Forms",
-  "main": "",
+  "main": "./dist/**/*",
   "moduleType": [],
   "keywords": [
     "angular",
