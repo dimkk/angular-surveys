@@ -118,5 +118,5 @@ gulp.task('serve', ['default'], ()=>{
             open: 'local',
             browser: "google chrome"
         });
-    gulp.watch(['i18n/**/*.json', './src/**/*.html', './styles/*.*css', 'src/**/*.js'], ['default-watch']); 
+    gulp.watch(['i18n/**/*.json', './src/**/*.html', './styles/*.*css', 'src/**/*.js', './demo-material/*.*'], ['default-watch']); 
 });

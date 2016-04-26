@@ -32,7 +32,7 @@ node_modules
 bower_components
 
 tmp
-
+dist
 # IntelliJ project files
 .idea
 *.iml
@@ -41,3 +41,4 @@ gen
 /nbproject/private/
 
 nbproject
+dist

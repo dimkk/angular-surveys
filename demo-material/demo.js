@@ -6,9 +6,14 @@ angular.module('app', ['ngMaterial', 'mwFormBuilder', 'mwFormViewer', 'mwFormUti
         });
         $translateProvider.preferredLanguage('en');
     })
-    .controller('DemoController', function($q,$http, $translate, mwFormResponseUtils) {
+    .controller('DemoController', function($q,$http, $translate, mwFormResponseUtils, $mdSidenav) {
 
         var ctrl = this;
+        
+        ctrl.toggleLeft = function () {
+            $mdSidenav('left').toggle();
+        }
+        
         ctrl.cmergeFormWithResponse = false;
         ctrl.cgetQuestionWithResponseList = false;
         ctrl.cgetResponseSheetHeaders = false;
@@ -23,7 +28,7 @@ angular.module('app', ['ngMaterial', 'mwFormBuilder', 'mwFormViewer', 'mwFormUti
             .then(function(res){
                 ctrl.formData = res.data;
             });
-        ctrl.formBuilder={};
+        ctrl.formBuilder={};;
         ctrl.formViewer = {};
         ctrl.formOptions = {
             autoStart: false
@@ -108,4 +113,6 @@ angular.module('app', ['ngMaterial', 'mwFormBuilder', 'mwFormViewer', 'mwFormUti
             return mwFormResponseUtils.getResponseSheet(ctrl.formData, ctrl.responseData, ctrl.headersWithQuestionNumber);
         };
 
+    }).controller('LeftCtrl', function(){
+        
     });
