@@ -34,6 +34,14 @@
     "angular-bootstrap": "^1.2.4",
     "Sortable": "dev"
   },
+  "overrides": {
+    "Sortable": {
+      "main": [
+        "Sortable.js",
+        "ng-sortable.js"
+      ]
+    }
+  },
   "devDependencies": {
     "bootstrap-sass": "3.x",
     "angular-translate-loader-partial": "2.x",
